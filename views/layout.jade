@@ -1,0 +1,26 @@
+doctype html
+html
+  head
+    title= title
+
+    // Viewport mobile tag for sensible mobile support
+    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
+
+    block styles
+        link(rel="stylesheet", href="/styles/estilos.css")
+
+  body
+    ul.menu
+        li.menu__item
+            a.menu__link(href="#") Inicio
+        li.menu__item
+            a.menu__link(href="#") Vista
+    block body
+
+    // The linker searches for this tag and adds js.  If there's no linker, we point to sails.io.js
+    // SCRIPTS
+    script(src="/js/dependencies/sails.io.js")
+    script(src="/js/jquery.js")
+    script(src="/js/script.js")
+    // SCRIPTS END
+

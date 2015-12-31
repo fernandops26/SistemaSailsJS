@@ -1,0 +1,30 @@
+extends ./layout
+
+block body
+	h1.titulo Editar Usuario
+	.contenedor
+		form(action="/user/actualizarUsuario/#{user.id}",method="post")
+			label.contenedor__label Nombre
+			if user.name
+				input.contenedor__caja(placeholder="Ingresa tu nombre",name="name",type="text",required,value="#{user.name}")
+			else
+				input.contenedor__caja(placeholder="Ingresa tu nombre",name="name",type="text",required,value="")
+			label.contenedor__label Apellido
+			if user.last_name
+				input.contenedor__caja(placeholder="Ingresa tu apellido",name="last_name",type="text",required,value="#{user.last_name}")
+			else
+				input.contenedor__caja(placeholder="Ingresa tu apellido",name="last_name",type="text",required,value="")
+			label.contenedor__label Usuario
+			if user.username
+				input.contenedor__caja(placeholder="Ingresa tu usuario",name="username",type="text",required,value="#{user.username}")
+			else
+				input.contenedor__caja(placeholder="Ingresa tu usuario",name="username",type="text",required,value="")
+			label.contenedor__label Email
+			if user.email
+				input.contenedor__caja(placeholder="Ingresa tu email",name="email",type="email",required,value="#{user.email}")
+			else
+				input.contenedor__caja(placeholder="Ingresa tu email",name="email",type="email",required,value="")
+			input.contenedor__boton(value="Actualizar",type="submit")
+			if user.resultado
+				label.error #{user.resultado}
+		a(href="/user/lista").link Regresar

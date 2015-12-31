@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <!-- Viewport mobile tag for sensible mobile support-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/styles/estilos.css">
+  </head>
+  <body>
+    <ul class="menu">
+      <li class="menu__item"><a href="#" class="menu__link">Inicio</a></li>
+      <li class="menu__item"><a href="#" class="menu__link">Vista</a></li>
+    </ul>
+    <h1 class="titulo">Nuevo usuario</h1>
+    <div class="contenedor">
+      <form id="formCrear" action="/user/create" method="post">
+        <label class="contenedor__label">Nombre</label>
+        <input placeholder="Ingresa tu nombre" name="name" type="text" required value="" class="contenedor__caja">
+        <label class="contenedor__label">Apellido</label>
+        <input placeholder="Ingresa tu apellido" name="last_name" type="text" required value="" class="contenedor__caja">
+        <label class="contenedor__label">Usuario</label>
+        <input placeholder="Ingresa tu usuario" name="username" type="text" required value="" class="contenedor__caja">
+        <label class="contenedor__label">Email</label>
+        <input placeholder="Ingresa tu email" name="email" type="email" required value="" class="contenedor__caja">
+        <input value="Crear ahora" type="submit" class="contenedor__boton">
+        <ul id="mensaje" class="mensaje"></ul>
+      </form>
+    </div>
+    <!-- The linker searches for this tag and adds js.  If there's no linker, we point to sails.io.js-->
+    <!-- SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/script.js"></script>
+    <!-- SCRIPTS END-->
+  </body>
+</html>

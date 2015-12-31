@@ -1,0 +1,10 @@
+extends ./layout
+
+block body
+	ul.contenedorFlex
+		each item in lista
+			li.contenedorFlex__item
+				label.contenedorFlex__label=item.name
+				label.contenedorFlex__label=item.last_name
+				label.contenedorFlex__label=item.email
+				a.contenedorFlex__link(href="/user/editar/#{item.id}") V

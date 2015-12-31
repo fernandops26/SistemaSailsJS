@@ -1,0 +1,34 @@
+extends ./layout
+
+block body
+	h1.titulo Nuevo usuario
+	.contenedor
+		form#formCrear(action="/user/create",method="post")
+			label.contenedor__label Nombre
+			if name
+				input.contenedor__caja(placeholder="Ingresa tu nombre",name="name",type="text",required,value="#{name}")
+			else
+				input.contenedor__caja(placeholder="Ingresa tu nombre",name="name",type="text",required,value="")
+			label.contenedor__label Apellido
+			if last_name
+				input.contenedor__caja(placeholder="Ingresa tu apellido",name="last_name",type="text",required,value="#{last_name}")
+			else
+				input.contenedor__caja(placeholder="Ingresa tu apellido",name="last_name",type="text",required,value="")
+			label.contenedor__label Usuario
+			if username
+				input.contenedor__caja(placeholder="Ingresa tu usuario",name="username",type="text",required,value="#{username}")
+			else
+				input.contenedor__caja(placeholder="Ingresa tu usuario",name="username",type="text",required,value="")
+			label.contenedor__label Email
+			if email
+				input.contenedor__caja(placeholder="Ingresa tu email",name="email",type="email",required,value="#{email}")
+			else
+				input.contenedor__caja(placeholder="Ingresa tu email",name="email",type="email",required,value="")
+			//- label.contenedor__label Contraseña
+			//- input.contenedor__caja(placeholder="Ingresa tu contraseña",name="password",type="password",required,value="")
+
+			//- label.contenedor__label Confirmar Contraseña
+			//- input.contenedor__caja(placeholder="Corfirmar contraseña",name="confirm_password",type="password",required,value="")
+
+			input.contenedor__boton(value="Crear ahora",type="submit")
+			ul.mensaje#mensaje
