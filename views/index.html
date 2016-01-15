@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <!-- Viewport mobile tag for sensible mobile support-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/styles/estilos.css">
+  </head>
+  <body>
+    <div class="contenedor__icono__menu">
+      <div id="icono__menu" class="icono__menu icon-menu-movil"></div>
+    </div>
+    <div class="contenedor__menu">
+      <div id="contenedor__menu__cerrar" class="contenedor__menu__cerrar icon-casa"></div>
+      <ul id="menu_principal" class="menu">
+        <li class="menu__item"><a href="/" class="menu__link">Inicio</a></li>
+        <li class="menu__item"><a href="/login" class="menu__link">Iniciar Sesion</a></li>
+        <li class="menu__item"><a href="/registro" class="menu__link">Registrarse</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Acerca</a>
+          <ul class="submenu">
+            <li class="submenu__item"><a href="#" class="submenu__link">Proyecto</a></li>
+            <li class="submenu__item"><a href="#" class="submenu__link">Nosotros</a></li>
+          </ul>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">Contacto</a></li>
+      </ul>
+    </div>
+    <div id="contenido_general" class="contenido_general">
+      <div class="fondo">
+        <h1 class="fondo__titulo">Bienvenido</h1>
+        <div id="login" class="login">
+          <form action="/loguear2" method="POST" id="login__formulario" class="login__formulario">
+            <input type="text" placeholder="Usuario" name="usuario" maxlength="20" class="login__input">
+            <input type="password" placeholder="Contraseña" name="password" maxlength="30" class="login__input">
+            <input type="submit" name="submit" value="Loguearse" class="login__boton boton"><a href="#" id="login_link_registro" class="login__link">¿No estas registrado?</a>
+          </form>
+          <div class="login__contenedor__link"><a href="#" class="login__link">¿Perdiste tu clave?</a></div>
+        </div>
+        <div id="registro" class="registro registro--oculto">
+          <form action="/registrar2" method="POST" id="registro__formulario" class="registro__formulario">
+            <input type="text" placeholder="Nombres y apellidos" name="name" maxlength="100" class="registro__input">
+            <input type="text" placeholder="Nombre de usuario" name="username" maxlength="20" class="registro__input">
+            <input type="email" placeholder="Correo electronico" name="email" maxlength="50" class="registro__input">
+            <input type="password" placeholder="Contraseña" name="password" maxlength="30" class="registro__input">
+            <input type="password" placeholder="Confirmar contraseña" name="confirm_password" maxlength="30" class="registro__input">
+            <input type="submit" name="submit" value="Registrarse" class="registro__boton boton"><a href="#" id="registro_link_iniciar_sesion" class="registro__link">Iniciar sesión</a>
+          </form>
+          <div class="registro__contenedor__link"><small class="registro__texto">Al unirte a la web, aceptas nuestras condiciones de servicio y nuestra política de privacidad</small></div>
+        </div>
+      </div>
+    </div>
+    <!-- The linker searches for this tag and adds js.  If there's no linker, we point to sails.io.js-->
+    <!-- SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/script.js"></script>
+    <!-- SCRIPTS END-->
+  </body>
+</html>

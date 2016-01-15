@@ -28,3 +28,9 @@ block body
 			if user.resultado
 				label.error #{user.resultado}
 		a(href="/user/lista").link Regresar
+		.contenedor__formulario.contenedor__formulario__agregar
+			form(action="").formulario.formulario--gris
+				label.formulario__titulo Nueva nota
+				input(type="text",name="titulo",placeholder="Titulo",maxlength="50").formulario__input
+				textarea(name="detalle", cols="30", rows="3",placeholder="¿De que se trata el libro?.Describelo en un máximo 140 caracteres",maxlength="140").formulario__textarea
+				input(type="submit",value="Añadir").forulario__boton.boton.boton--verde

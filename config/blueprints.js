@@ -58,8 +58,8 @@ module.exports.blueprints = {
   * following routes:                                                        *
   * :::::::::::::::::::::::::::::::::::::::::::::::::::::::                  *
   *  GET /boat -> BoatController.find                                        *
-  *  GET /boat/:id -> BoatController.findOne                                 *
-  *  POST /boat -> BoatController.create                                     *
+  *  GET /boat/o:id -> BoatController.findOne                                 *
+  *  POST /boat -> BatController.create                                     *
   *  PUT /boat/:id -> BoatController.update                                  *
   *  DELETE /boat/:id -> BoatController.destroy                              *
   *                                                                          *
@@ -69,7 +69,7 @@ module.exports.blueprints = {
   *                                                                          *
   ***************************************************************************/
 
-   rest: true,
+   rest: false,
 
   /***************************************************************************
   *                                                                          *

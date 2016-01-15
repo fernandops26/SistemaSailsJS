@@ -33,18 +33,30 @@ module.exports.routes = {
   ***************************************************************************/
 
   '/': {
-    view: 'homepage'
+    view: 'index'
   },
 
-  '/user/new':'UserController.new',
+  // '/user/new':'UserController.new',
 
-  '/user/create':'UserController.create',
+  'get /registro':'UserController.registro',
+  'get /login':'UserController.login',
+  'post /loguear':'UserController.loguear',
+  'post /registrar':'UserController.registrar',
+  'post /loguear2':'UserController.loguear2',
 
-  '/user/lista':'UserController.listar',
+  // 'get /user':'UserController.listar',
 
-  'get /user/editar/:id':'UserController.editar',
+  // 'get /user/editar/:id':'UserController.editar',
+  //
+  // 'get /user/lista': 'UserController.listar',
+  //
+  // 'post /user/actualizarUsuario/:id':'UserController.actualizar',
 
-  'post /user/actualizarUsuario/:id':'UserController.actualizar'
+  'get /libro':'LibroController.listar',
+
+  'post /libro/agregar': 'LibroController.agregar',
+
+  'get /libro/filtrar': 'LibroController.filtrar'
 
   /***************************************************************************
   *                                                                          *

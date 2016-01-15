@@ -1,0 +1,230 @@
+.fondo{
+	height: 800px;
+	background-color: darken($color-principal,25);
+	background-image: url("../../images/fondo-principal-movil.jpg");
+	background-size: cover;
+	background-position: bottom;
+	padding:1em;
+	overflow: hidden;
+	text-align: center;
+
+	@media screen and (min-width: 800px) {
+		background-image:url("../../images/fondo-principal.jpg");
+
+	}
+
+
+	animation-name: fondo;
+	animation-iteration-count: infinite;
+	animation-duration: 20s;
+	animation-timing-function: linear;
+	transition:background-image .5;
+
+	&__titulo{
+		font-size: 3em;
+		color:#fff;
+		font-family: 'ubuntubold';
+	}
+
+//Estilos del fondo de la pagina aparte de registro
+
+	&--registro{
+		height: 800px;
+		background-color: darken($color-principal,25);
+		background-image: url("../../images/fondo-registro.jpg");
+		background-size: cover;
+		background-position: bottom;
+		padding:1em;
+		overflow: hidden;
+		text-align: center;
+	}
+
+	&--login{
+		height: 800px;
+		background-color: darken($color-principal,25);
+		background-image: url("../../images/fondo-principal3-movil.jpg");
+		background-size: cover;
+		background-position: bottom;
+		padding:1em;
+		overflow: hidden;
+		text-align: center;
+	}
+
+}
+
+.login,.registro{
+	padding:1em;
+	width: 75%;
+	margin:1em auto;
+	background-color: rgba(#000,.3);
+	display: block;
+	transition: display .5s;
+
+	max-width: 420px;
+
+
+	&__formulario{
+		display: flex;
+		flex-wrap:wrap;
+		justify-content:center;
+	}
+
+	&__input{
+		padding: .6em .9em;
+		color:darken($color-principal,20);
+		font-size: 1em;
+		border-radius: 5px;
+		width: 90%;
+		display: block;
+		margin-bottom: 1em;
+	}
+
+	&__boton{
+		margin-right: auto;
+		margin-bottom:1em;
+		background-color: $color-principal;
+		box-shadow: 0 2px 0 2px darken($color-principal,10);
+
+		@media screen and (min-width: 500px){
+			margin-left: 2%;
+		}
+	}
+
+	&__contenedor__link{
+		display: flex;
+		padding: 0;
+	}
+
+	&__link{
+		text-decoration: none;
+		color:#fff;
+		font-size: 1em;
+		font-family: 'ubuntubold';
+		display: flex;
+		width: 100px;
+		justify-content:center;
+		align-items:center;
+		height: 40px;
+
+		@media screen and (min-width: 500px){
+			margin-right: 2%;
+			width: 180px;
+		}
+
+		&:nth-child(1){
+			width: 150px;
+			text-align: left;
+		}
+
+		&:hover{
+			color:rgba(#fff,.7);
+		}
+	}
+
+	&__texto{
+		font-family: 'ubuntubold';
+		font-size: .8em;
+		color: #fff;
+		display: inline;
+	}
+
+	&__mensajes{
+		width: 90%;
+
+		margin: .3em auto;
+		border-radius: 5px;
+		list-style: none;
+		position: relative;
+
+		height: 0;
+		overflow: hidden;
+		transition: all .5s;
+
+
+		&--correcto{
+			height: auto;
+			padding: 1em;
+			background-color: rgba(#75D16E,.7);
+		}
+
+		&--error{
+			height: auto;
+			padding: 1em;
+			background-color: rgba(#E34949,.7);
+		}
+
+		&__cerrar{
+			position: absolute;
+			width: 1.1em;
+			height: 1.1em;
+			background-color: rgba(#000,.5);
+			top:.5em;
+			right: .5em;
+			border-radius: 50%;
+			cursor: pointer;
+			font-family: 'ubuntubold';
+			display: flex;
+			justify-content: center;
+			align-items: flex-start;
+			color:rgba(#fff,.6);
+			font-size: .9em;
+		}
+	}
+
+	&__mensaje{
+		color:#fff;
+		text-align: left;
+		font-family: 'ubuntubold';
+		font-size: .8em;
+	}
+
+
+	&--oculto{
+		display: none;
+	}
+}
+
+
+@keyframes fondo{
+	0%{
+		background-image: url("../../images/fondo-principal-movil.jpg");
+		@media screen and (min-width: 800px) {
+			background-image:url("../../images/fondo-principal.jpg")
+
+		}
+	}
+
+	25%{
+		background-image: url("../../images/fondo-principal2-movil.jpg");
+		@media screen and (min-width: 800px) {
+			background-image:url("../../images/fondo-principal2.jpg")
+
+		}
+	}
+
+	50%{
+		// opacity: 1;
+		background-image: url("../../images/fondo-principal3-movil.jpg");
+		@media screen and (min-width: 800px) {
+			background-image:url("../../images/fondo-principal3.jpg")
+
+		}
+	}
+
+	75%{
+		// opacity: 1;
+		background-image: url("../../images/fondo-principal4-movil.jpg");
+		@media screen and (min-width: 800px) {
+			background-image:url("../../images/fondo-principal4.jpg")
+
+		}
+	}
+
+	100%{
+		background-image: url("../../images/fondo-principal-movil.jpg");
+		@media screen and (min-width: 800px) {
+			background-image:url("../../images/fondo-principal5.jpg")
+
+		}
+	}
+}

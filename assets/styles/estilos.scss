@@ -1,21 +1,10 @@
-$color-principal:#118798;
-.menu{
-	background-color: $color-principal;
-	display:flex;
-	list-style: none;
-	padding:0;
-	&__item{
-	}
-
-	&__link{
-		text-decoration:none;
-		color:#fff;
-		display:block;
-		padding:.5em;
-		line-height:1em;
-		font-size:1.1em;
-	}
-}
+@import "base/_variables.scss";
+@import "base/_fuentes.scss";
+@import "base/_iconos.scss";
+@import "modulos/_componentes.scss";
+@import "modulos/_menu.scss";
+@import "pagina/_index.scss";
+@import "pagina/_libros.scss";
 
 .contenedorFlex{
 	

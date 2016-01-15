@@ -1,0 +1,19 @@
+extends ./mascara.jade
+block body
+  .fondo--login
+    h1.fondo__titulo Login
+    .login
+      form(action="/loguear",method="POST").login__formulario.login__formulario--aparte
+        input(type="text",placeholder="Usuario",name="username",maxlength="20").login__input
+        input(type="password",placeholder="Contraseña",name="password",maxlength="30").login__input
+        input(type="submit",name="submit",value="Loguearse").login__boton.boton
+      if error
+        ul.login__mensajes.login__mensajes--error
+          .login__mensajes__cerrar x
+          li.login__mensaje=error
+      else
+      ul.login__mensajes
+        .login__mensajes__cerrar x
+        li.login__mensaje
+      .login__contenedor__link
+        a(href="#").login__link ¿Perdiste tu clave?

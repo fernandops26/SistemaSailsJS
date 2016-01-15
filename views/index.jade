@@ -1,0 +1,24 @@
+extends User/mascara.jade
+
+block body
+	.fondo
+		h1.fondo__titulo Bienvenido
+		.login#login
+			form(action="/loguear2",method="POST").login__formulario#login__formulario
+				input(type="text",placeholder="Usuario",name="usuario",maxlength="20").login__input
+				input(type="password",placeholder="Contraseña",name="password",maxlength="30").login__input
+				input(type="submit",name="submit",value="Loguearse").login__boton.boton
+				a(href="#").login__link#login_link_registro ¿No estas registrado?
+			.login__contenedor__link
+				a(href="#").login__link ¿Perdiste tu clave?
+		.registro.registro--oculto#registro
+			form(action="/registrar2",method="POST").registro__formulario#registro__formulario
+				input(type="text",placeholder="Nombres y apellidos",name="name",maxlength="100").registro__input
+				input(type="text",placeholder="Nombre de usuario",name="username",maxlength="20").registro__input
+				input(type="email",placeholder="Correo electronico",name="email",maxlength="50").registro__input
+				input(type="password",placeholder="Contraseña",name="password",maxlength="30").registro__input
+				input(type="password",placeholder="Confirmar contraseña",name="confirm_password",maxlength="30").registro__input
+				input(type="submit",name="submit",value="Registrarse").registro__boton.boton
+				a(href="#").registro__link#registro_link_iniciar_sesion Iniciar sesión
+			.registro__contenedor__link
+				small.registro__texto Al unirte a la web, aceptas nuestras condiciones de servicio y nuestra política de privacidad

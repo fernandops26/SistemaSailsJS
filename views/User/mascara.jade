@@ -1,0 +1,40 @@
+doctype html
+html
+  head
+    title= title
+
+    // Viewport mobile tag for sensible mobile support
+    meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1")
+
+    block styles
+        link(rel="stylesheet", href="/styles/estilos.css")
+  body
+    .contenedor__icono__menu
+        .icono__menu.icon-menu-movil#icono__menu
+    .contenedor__menu
+        .contenedor__menu__cerrar.icon-casa#contenedor__menu__cerrar
+        ul.menu#menu_principal
+            li.menu__item
+                a.menu__link(href="/") Inicio
+            li.menu__item
+                a.menu__link(href="/login") Iniciar Sesion
+            li.menu__item
+                a.menu__link(href="/registro") Registrarse
+            li.menu__item
+                a.menu__link(href="#") Acerca
+                ul.submenu
+                    li.submenu__item
+                        a.submenu__link(href="#") Proyecto
+                    li.submenu__item
+                        a.submenu__link(href="#") Nosotros
+            li.menu__item
+                a.menu__link(href="#") Contacto
+    .contenido_general#contenido_general
+        block body
+
+    // The linker searches for this tag and adds js.  If there's no linker, we point to sails.io.js
+    // SCRIPTS
+    script(src="/js/dependencies/sails.io.js")
+    script(src="/js/jquery.js")
+    script(src="/js/script.js")
+    // SCRIPTS END

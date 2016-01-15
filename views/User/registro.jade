@@ -1,0 +1,25 @@
+extends ./mascara.jade
+
+block body
+	.fondo--registro
+		h1.fondo__titulo Registro
+		.registro
+			form(action="/registrar",method="POST").registro__formulario.registro__formulario--aparte
+				input(type="text",placeholder="Nombres y apellidos",name="name",maxlength="100").registro__input
+				input(type="text",placeholder="Nombre de usuario",name="username",maxlength="20").registro__input
+				input(type="email",placeholder="Correo electronico",name="email",maxlength="50").registro__input
+				input(type="password",placeholder="Contraseña",name="password",maxlength="30").registro__input
+				input(type="password",placeholder="Confirmar contraseña",name="confirm_password",maxlength="30").registro__input
+				input(type="submit",name="submit",value="Registrarse").registro__boton.boton
+			if message
+				ul.registro__mensajes.registro__mensajes--error
+					.registro__mensajes__cerrar x
+					li.registro__mensaje message
+			else
+				ul.registro__mensajes
+					.registro__mensajes__cerrar x
+					li.registro__mensaje Usuario ya existe
+					li.registro__mensaje Formato de email incorecto
+			.registro__contenedor__link
+				small.registro__texto Al unirte a la web, aceptas nuestras condiciones de servicio y nuestra política de privacidad
+				ul.mensaje#mensaje

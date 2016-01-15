@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <!-- Viewport mobile tag for sensible mobile support-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="stylesheet" href="/styles/estilos.css">
+  </head>
+  <body>
+    <div class="contenedor__icono__menu">
+      <div id="icono__menu" class="icono__menu icon-menu-movil"></div>
+    </div>
+    <div class="contenedor__menu">
+      <div id="contenedor__menu__cerrar" class="contenedor__menu__cerrar icon-casa"></div>
+      <ul id="menu_principal" class="menu">
+        <li class="menu__item"><a href="#" class="menu__link">Inicio</a></li>
+        <li class="menu__item"><a href="#" class="menu__link">Gestion</a>
+          <ul class="submenu">
+            <li class="submenu__item"><a href="/user/lista" class="submenu__link">Usuarios</a></li>
+            <li class="submenu__item"><a href="/libro" class="submenu__link">Libros</a></li>
+            <li class="submenu__item"><a href="#" class="submenu__link">Notas</a></li>
+          </ul>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">Acerca</a>
+          <ul class="submenu">
+            <li class="submenu__item"><a href="#" class="submenu__link">Proyecto</a></li>
+            <li class="submenu__item"><a href="#" class="submenu__link">Nosotros</a></li>
+          </ul>
+        </li>
+        <li class="menu__item"><a href="#" class="menu__link">Contacto</a></li>
+      </ul>
+    </div>
+    <div id="contenido_general" class="contenido_general">
+    </div>
+    <!-- The linker searches for this tag and adds js.  If there's no linker, we point to sails.io.js-->
+    <!-- SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/jquery.js"></script>
+    <script src="/js/script.js"></script>
+    <!-- SCRIPTS END-->
+  </body>
+</html>

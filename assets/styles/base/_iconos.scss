@@ -1,0 +1,182 @@
+
+// @font-face {
+//   font-family: "miweb";
+//   src:url("/fonts/iconos/miweb.eot");
+//   src:url("/fonts/iconos/miweb.eot?#iefix") format("embedded-opentype"),
+//   url("/fonts/iconos/miweb.woff") format("woff"),
+//   url("/fonts/iconos/miweb.ttf") format("truetype"),
+//   url("/fonts/iconos/miweb.svg#miweb") format("svg");
+//   font-weight: normal;
+//   font-style: normal;
+// }
+
+
+// [data-icon]:before {
+//   font-family: "miweb" !important;
+//   content: attr(data-icon);
+//   font-style: normal !important;
+//   font-weight: normal !important;
+//   font-variant: normal !important;
+//   text-transform: none !important;
+//   speak: none;
+//   line-height: 1;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// [class^="icon-"]:before,
+// [class*=" icon-"]:before {
+//   font-family: "miweb" !important;
+//   font-style: normal !important;
+//   font-weight: normal !important;
+//   font-variant: normal !important;
+//   text-transform: none !important;
+//   speak: none;
+//   line-height: 1;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
+
+// .icon-menu-movil:before {
+//   content: "a";
+// }
+
+// .icon-casa:before {
+//   content: "b";
+// }
+// .icon-medio-circulo:before {
+//   content: "y";
+// }
+// .icon-posicion:before {
+//   content: "A";
+// }
+
+
+
+
+
+
+// /*
+// Iconos del archivo de victor
+//  */
+
+
+// // @charset "UTF-8";
+
+// // @font-face {
+// //   font-family: "universidadvictor";
+// //   src:url("/fonts/iconos/universidadvictor.eot");
+// //   src:url("/fonts/iconos/universidadvictor.eot?#iefix") format("embedded-opentype"),
+// //     url("/fonts/iconos/universidadvictor.woff") format("woff"),
+// //     url("/fonts/iconos/universidadvictor.ttf") format("truetype"),
+// //     url("/fonts/iconos/universidadvictor.svg#universidadvictor") format("svg");
+// //   font-weight: normal;
+// //   font-style: normal;
+
+// // }
+
+
+// // [data-icon]:before {
+// //   font-family: "universidadvictor" !important;
+// //   content: attr(data-icon);
+// //   font-style: normal !important;
+// //   font-weight: normal !important;
+// //   font-variant: normal !important;
+// //   text-transform: none !important;
+// //   speak: none;
+// //   line-height: 1;
+// //   -webkit-font-smoothing: antialiased;
+// //   -moz-osx-font-smoothing: grayscale;
+// // }
+
+// // [class^="icon-"]:before,
+// // [class*=" icon-"]:before {
+// //   font-family: "universidadvictor" !important;
+// //   font-style: normal !important;
+// //   font-weight: normal !important;
+// //   font-variant: normal !important;
+// //   text-transform: none !important;
+// //   speak: none;
+// //   line-height: 1;
+// //   -webkit-font-smoothing: antialiased;
+// //   -moz-osx-font-smoothing: grayscale;
+// // }
+
+// // .icon-menu:before {
+// //   content: "";
+// // }
+// // .icon-nota:before {
+// //   content: "ah";
+// // }
+// // .icon-foto:before {
+// //   content: "c";
+// // }
+// .icon-libro:before {
+//   content: "B";
+// }
+// // .icon-usuario:before {
+// //   content: "e";
+// // }
+// // 
+// // 
+// // 
+
+
+
+
+@font-face {
+  font-family: "sails1";
+  src:url("/fonts/iconos/sails1.eot");
+  src:url("/fonts/iconos/sails1.eot?#iefix") format("embedded-opentype"),
+    url("/fonts/iconos/sails1.woff") format("woff"),
+    url("/fonts/iconos/sails1.ttf") format("truetype"),
+    url("/fonts/iconos/sails1.svg#sails1") format("svg");
+  font-weight: normal;
+  font-style: normal;
+
+}
+
+[data-icon]:before {
+  font-family: "sails1" !important;
+  content: attr(data-icon);
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"]:before,
+[class*=" icon-"]:before {
+  font-family: "sails1" !important;
+  font-style: normal !important;
+  font-weight: normal !important;
+  font-variant: normal !important;
+  text-transform: none !important;
+  speak: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu-movil:before {
+  content: "\61";
+}
+.icon-lapiz:before {
+  content: "\62";
+}
+.icon-basurero:before {
+  content: "\63";
+}
+.icon-signo-mas:before {
+  content: "\64";
+}
+.icon-casa:before {
+  content: "\65";
+}
+.icon-libro:before {
+  content: "\66";
+}

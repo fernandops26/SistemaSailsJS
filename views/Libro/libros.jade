@@ -1,0 +1,30 @@
+extends ../layout
+
+block body
+	.gestion#gestion
+		button.boton.boton--agregar.boton__libro#boton__libro--nuevo Nuevo
+		ul.lista__libros#lista__libros
+			each libro in libros
+				li.libro
+					.libro__dibujo.icon-libro
+					.libro__contenido
+						label.libro__creacion= 'Creado:  ' + libro.fecha_creacion.toLocaleString()
+						label.libro__titulo=libro.titulo
+						p.libro__detalle=libro.detalle
+					.libro__acciones
+						a.libro__link.libro__link--eliminar.icon-basurero
+						a.libro__link.libro__link--editar.icon-lapiz
+						a.libro__link.libro__link--nota.icon-signo-mas
+		.contenedor__paginacion
+			.paginacion
+				- var paginas=Math.ceil(total/5);
+				- for(var i=1;i<=paginas;i++){
+					.paginacion__item(data-npagina="#{i}") #{i}
+				-}
+	.contenedor__formulario.contenedor__formulario__agregar
+		form(action="").formulario.formulario--gris#formulario__agregar__libro
+			label.formulario__titulo Nueva nota
+			input(type="text",name="titulo",placeholder="Titulo",maxlength="50").formulario__input
+			textarea(name="detalle", cols="30", rows="3",placeholder="¿De que se trata el libro?.Describelo en un máximo 140 caracteres",maxlength="140").formulario__textarea
+			input(type="submit",value="Añadir").formulario__boton.boton.boton--verde
+			input(type="button",value="Cancelar").formulario__boton--cancelar.boton.boton--rojo
